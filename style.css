@@ -1,0 +1,179 @@
+body {
+  background-color: #3399FF;
+  margin: 20px 30% 0 30%;
+  min-width: 250px;
+}
+
+* {
+  box-sizing: border-box;
+
+  /* making the items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* Stylyng the list items */
+ul li {
+  cursor: pointer;
+  position: relative;
+  padding: 12px 8px 12px 40px;
+  list-style-type: none;
+  background: #eee;
+  font-size: 20px;
+  transition: 0.2s;
+}
+
+/* zebra-stripes */
+ul li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul li:hover {
+  background: #ddd;
+}
+
+ul li.checked {
+  background: #888;
+  color: #fff;
+  transition: 0.3s;
+  text-decoration: line-through;
+  
+}
+
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+  transition: 0.3s;
+}
+
+
+/* Stylying the close button */
+.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 12px 16px 12px 16px;
+}
+
+.close:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+
+/* Stylying the header */
+.header {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  color: black;
+  text-align: center;
+}
+
+.header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* Styling the "Add" button */
+.addBtn {
+  padding: 10px;
+  width: 25%;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 0;
+  font-weight: bolder;
+  margin-left: 3%;
+}
+
+.addBtn:hover {
+  background-color: #bbb;
+}
+
+
+/* Styling Input field */
+.container{
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.row{
+  float: left;
+  width: 100%;
+  padding: 20px 0 50px;
+}
+
+:focus{
+  outline: none;
+}
+
+.col{
+  float: left;
+  width: 90%;
+  margin: 40px 3% -40px 3%;
+  position: relative;
+} 
+
+input[type="text"]{
+  font: 15px/24px "Lato", Arial, sans-serif;
+  color: #333;
+  width: 100%;
+  box-sizing: border-box;
+  letter-spacing: 1px;
+}
+
+.myEffect{
+  border: 0;
+  padding: 7px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.myEffect ~ .focus-border{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #3399FF;
+  transition: 0.4s;
+}
+
+.myEffect:focus ~ .focus-border{
+  width: 100%;
+  transition: 0.4s;
+}
+
+/* Github link */
+
+.github{
+  margin-top: 40px;
+  text-align: center;
+}
+
+.github a{
+  text-decoration: none;
+  color: white;
+}
